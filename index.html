@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>ตัวช่วยสร้าง Prompt เกม</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script defer src="script.js"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <header class="bg-indigo-600 text-white p-4 text-center text-xl font-bold">🎮 ตัวช่วยสร้าง Prompt เกม (สำหรับ Canva AI)</header>
+
+  <main class="p-4 max-w-5xl mx-auto space-y-4">
+    <div class="grid md:grid-cols-3 gap-4">
+      <div>
+        <label class="block font-semibold">รายวิชา</label>
+        <select id="subject" class="w-full p-2 border rounded">
+          <option>คณิตศาสตร์</option>
+          <option>วิทยาศาสตร์</option>
+          <option>ภาษาไทย</option>
+          <option>ภาษาอังกฤษ</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="block font-semibold">แนวคิดเกม</label>
+        <select id="concept" class="w-full p-2 border rounded">
+          <option>เกมกระดาน</option>
+          <option>เกมผ่านด่าน</option>
+          <option>เกมธุรกิจจำลอง</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="block font-semibold">แนวคิดที่กำหนดเอง</label>
+        <input id="customConcept" class="w-full p-2 border rounded" placeholder="เช่น เกมหมากล้อมความรู้">
+      </div>
+    </div>
+
+    <button onclick="generatePrompts()" class="bg-indigo-500 text-white px-4 py-2 rounded hover:bg-indigo-600">🚀 Generate Prompt</button>
+    <button onclick="saveToSheet()" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 ml-2">💾 บันทึกลง Google Sheets</button>
+    <a href="view.html" class="text-blue-600 underline ml-4">📜 ดูรายการ prompt ที่เคยบันทึก</a>
+
+    <div id="results" class="space-y-4 mt-6"></div>
+  </main>
+
+  <footer class="bg-gray-200 text-center p-4 mt-10 text-sm">สร้างโดย ครูนิด :: Prompt Creator © 2025</footer>
+</body>
+</html>

@@ -25,7 +25,7 @@ function generatePrompts() {
 
 function saveToSheet() {
   if (!generatedPrompts.length) return alert("กรุณาสร้าง Prompt ก่อน");
-  fetch("https://script.google.com/macros/s/YOUR_DEPLOYED_SCRIPT_ID/exec", {
+  fetch("https://script.google.com/macros/s/AKfycbxZUQyqdSvxXr7bassd6bXt7NAG0hbE9DLmMBSDYGkWl4j7maUHGeMqF2uNICkeUIzb/exec", {
     method: "POST",
     body: JSON.stringify(generatedPrompts),
   })
